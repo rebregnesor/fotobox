@@ -1,0 +1,19 @@
+QWidget {
+background-color: #4390DF;
+border: none
+
+}
+
+QStandardItem {
+background-color: white;
+}
+
+QLabel {
+color: white;
+font-family= "Droid Sans";
+font-size = 20
+}
+
+QListView {
+
+}
