@@ -17,6 +17,7 @@ class Countdown : public QTimer {
     private slots:
         void reduce_rem_sec();
 
+
 };
 
 
