@@ -46,7 +46,7 @@ void LivePreview::update_preview() {
     frame.loadFromData(QByteArray(data,size));
     scene->removeItem(frame_item);
     delete frame_item;
-    frame_item = scene->addPixmap(frame.scaledToHeight(this->height()));
+    frame_item = scene->addPixmap(frame.transformed(QTransform().scale(-1.3,1.3)));
     scene->update();
     gp_file_free(file);
 }
