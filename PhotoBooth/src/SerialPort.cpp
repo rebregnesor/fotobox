@@ -49,11 +49,11 @@ void SerialPort::read_serial() {
     QString new_data(readLine().data());
     serial_data.append(new_data);
 
-    if (serial_data.endsWith("\n")) {
-        serial_data.chop(2);
-        if (serial_data.compare(QString("s"))==0) {
+    if (serial_data.endsWith("\n")) { //check if full line is transmitted
+        serial_data.chop(2); //take away line break at the end
+        if (serial_data.compare(QString("s"))==0) { //if "s", the button was pressed -->start signal
             emit start();
-        } else {
+        } else { //otherwise a coin value is transmitted-->coin signal
             emit coin_inserted(serial_data.toDouble()/100);
         }
         serial_data.clear();

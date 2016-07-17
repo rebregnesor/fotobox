@@ -17,19 +17,19 @@ class PhotoBooth : public QMainWindow
     public:
         PhotoBooth(void);
     public slots:
-        void start_process();
-        void take_snapshot();
-        void continue_process();
+        void start_process(); //gets called whenever the button is pressed
+        void take_snapshot(); //takes one picture and adds it to the image list
+        void continue_process(); //gets called after first picture
         void combine_images();
-        void update_credit(double coin);
+        void update_credit(double coin); //update credit, when coin is inserted
         
     private:
         double credit;
         double price;
-        int countdown_sec;
-        int n_copies;
-        int n_images;
-        int image_number;
+        int countdown_sec; //countdown time in seconds
+        int n_copies; //number of photos that are going to be printed
+        int n_images; //number of images that are placed on one photo
+        int image_number; //current image
         InfoPanel * info_panel;
         LivePreview * live_preview;
         ThumbnailView * thumbnail_view;
