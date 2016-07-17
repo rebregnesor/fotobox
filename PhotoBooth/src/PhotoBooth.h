@@ -10,7 +10,7 @@
 #include "livepreview.h"
 #include "SerialPort.h"
 #include "gridimagecompositor.h"
-
+#include <opencv2/opencv.hpp>
 class PhotoBooth : public QMainWindow
 {
     Q_OBJECT

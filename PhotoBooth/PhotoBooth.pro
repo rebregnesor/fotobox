@@ -27,6 +27,6 @@ SOURCES += \
     src/gridimagecompositor.cpp
 
 
-LIBS += -lgphoto2 -lopencv_core -lopencv_highgui -lopencv_imgproc
+LIBS += -lgphoto2 -lopencv_core -lopencv_highgui -lopencv_imgproc -lopencv_imgcodecs
 
 CONFIG += serialport
